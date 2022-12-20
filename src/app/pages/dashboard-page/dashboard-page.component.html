@@ -1,1 +1,12 @@
-<p>dashboard-page works!</p>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let fitur of daftarFitur" class="col-md-4 mb-4">
+            <div class="card shadow">
+                <img src="card-img-top" [src]="fitur.image" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">{{ fitur.title }}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
