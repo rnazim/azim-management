@@ -8,13 +8,15 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { NavBrandComponent } from './components/nav-brand/nav-brand.component';
 import { FormsModule } from '@angular/forms';
 import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.component';
+import { UserPageComponent } from './pages/user-page/user-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
     NavBrandComponent,
-    DashboardPageComponent
+    DashboardPageComponent,
+    UserPageComponent
   ],
   imports: [
     BrowserModule,

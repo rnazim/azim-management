@@ -24,6 +24,6 @@ export class StorageService {
   }
 
   clear(key: string) {
-    localStorage.setItem(key, "");
+    localStorage.removeItem(key);
   }
 }
