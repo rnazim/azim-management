@@ -10,22 +10,22 @@ export class DashboardPageComponent {
     {
       "title": "Product Management",
       "image": "https://picsum.photos/200/90?random=1",
-      "link": ""
+      "link": "/product"
     },
     {
       "title": "User Management",
       "image": "https://picsum.photos/200/90?random=2",
-      "link": ""
+      "link": "/product"
     },
     {
       "title": "Sales Management",
       "image": "https://picsum.photos/200/90?random=3",
-      "link": ""
+      "link": "/product"
     },
     {
       "title": "Task Management",
       "image": "https://picsum.photos/200/90?random=4",
-      "link": ""
+      "link": "/product"
     },
     {
       "title": "Content Management",

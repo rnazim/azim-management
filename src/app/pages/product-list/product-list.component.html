@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <app-product-form #pf [product]="product"></app-product-form>
+        </div>
+        <div class="col-md-8">
+            <div *ngIf="products.length === 0" class="card">
+                <h5 class="card-header">Products</h5>
+                <div class="card-body">
+                    <h5 class="card-title">Hai, produkmu belum ada nih</h5>
+                    <p class="card-text">Isi produkmu di form sebelah ya</p>
+                </div>
+            </div>
+            <div *ngIf="products.length > 0" class="card">
+                <h5 class="card-header">Product</h5>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Price</th>
+                            <th>Discount</th>
+                            <th>Stock</th>
+                            <th>Brand</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let p of products" (click)="pf.setProduct(p)">
+                            <td>{{ p.title }}</td>
+                            <td>{{ p.price | currency }}</td>
+                            <td>{{ p.discountPercentage | percent }}</td>
+                            <td>{{ p.stock }}</td>
+                            <td>{{ p.brand }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

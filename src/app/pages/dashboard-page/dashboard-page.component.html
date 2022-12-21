@@ -5,6 +5,7 @@
                 <img src="card-img-top" [src]="fitur.image" alt="">
                 <div class="card-body">
                     <h5 class="card-title">{{ fitur.title }}</h5>
+                    <a [routerLink]="[fitur.link]" class="btn btn-primary">Akses</a>
                 </div>
             </div>
         </div>
