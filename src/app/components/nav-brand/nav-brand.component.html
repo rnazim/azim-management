@@ -1,9 +1,11 @@
-
 <nav class="navbar navbar-dark bg-dark mb-4">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand">
             <img src="https://icons.iconarchive.com/icons/thesquid.ink/free-flat-sample/512/bad-pig-icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
             Azim APP
         </a>
+        <div *ngIf="isLoggedIn()" class="d-flex">
+            <button (click)="onLogout()" class="btn btn-outline-light">Logout</button>
+        </div>
     </div>
 </nav>

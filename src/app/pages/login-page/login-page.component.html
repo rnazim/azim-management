@@ -4,17 +4,33 @@
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title">Sign In</h4>
-                    <div class="mb-2">
-                        <label class="form-label">Username</label>
-                        <input [(ngModel)]="user.username" type="text" class="form-control"/>
-                    </div>
-                    <div class="mb-2">
-                        <label class="form-label">Password</label>
-                        <input [(ngModel)]="user.password" type="password" class="form-control"/>
-                    </div>
-                    <div class="mb-2">
-                        <button (click)="onLogin()" class="btn btn-primary">Sign In</button>
-                    </div>
+                    <form [formGroup]="requiredForm" (ngSubmit)="onLogin()">
+                        <div class="mb-2">
+                            <label class="form-label">Username</label>
+                            <input [(ngModel)]="user.username" formControlName="username" type="text" class="form-control"/>
+                        </div>
+                        <div *ngIf="requiredForm.controls['username'].invalid
+                            && requiredForm.controls['username'].touched" class="form-text">
+                            <span class="text-danger" *ngIf="requiredForm.controls['password'].errors?.['required']">
+                                * required
+                            </span>
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label">Password</label>
+                            <input [(ngModel)]="user.password" formControlName="password" type="password" class="form-control"/>
+                        </div>
+                        <div *ngIf="requiredForm.controls['password'].invalid
+                            && requiredForm.controls['password'].touched" class="form-text">
+                            <span class="text-danger" *ngIf="requiredForm.controls['password'].errors?.['required']">
+                                * required
+                            </span>
+                        </div>
+                        <div class="mb-2">
+                            <button class="btn btn-primary">Sign In</button>
+                        </div>
+                        <p>{{ messageError }}</p>
+                    </form>
+
                 </div>
             </div>
         </div>

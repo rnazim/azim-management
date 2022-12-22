@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { NavBrandComponent } from './components/nav-brand/nav-brand.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.component';
 import { UserPageComponent } from './pages/user-page/user-page.component';
 import { ProductListComponent } from './pages/product-list/product-list.component';
@@ -31,7 +31,8 @@ import { ToasterComponent } from './components/toaster/toaster.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
