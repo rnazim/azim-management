@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <app-user-form #pf [user]="user"></app-user-form>
+        </div>
+        <div class="col-md-9">
+            <div *ngIf="users.length === 0" class="card">
+                <h5 class="card-header">Users</h5>
+                <div class="card-body">
+                    <h5 class="card-title">Hai, user belum ada nih</h5>
+                    <p class="card-text">Isi user di form sebelah ya</p>
+                </div>
+            </div>
+            <div *ngIf="users.length > 0" class="card">
+                <h5 class="card-header">User</h5>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>FirstName</th>
+                            <th>LastName</th>
+                            <th>MaidenName</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Username</th>
+                            <th>BirthDate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let p of users" (click)="pf.setUser(p)">
+                            <td>{{ p.firstName }}</td>
+                            <td>{{ p.lastName }}</td>
+                            <td>{{ p.maidenName }}</td>
+                            <td>{{ p.age }}</td>
+                            <td>{{ p.gender }}</td>
+                            <td>{{ p.email }}</td>
+                            <td>{{ p.phone }}</td>
+                            <td>{{ p.username }}</td>
+                            <td>{{ p.birthDate }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>      
+    </div>
+</div>
