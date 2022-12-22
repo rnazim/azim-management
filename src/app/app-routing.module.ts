@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { PageQrgenComponent } from './pages/page-qrgen/page-qrgen.component';
 import { ProductListComponent } from './pages/product-list/product-list.component';
 import { UserListComponent } from './pages/user-list/user-list.component';
 import { AuthGuardService } from './services/auth-guard.service';
@@ -19,6 +20,11 @@ const routes: Routes = [
   {
     path: 'product',
     component: ProductListComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'qrcode',
+    component: PageQrgenComponent,
     canActivate: [AuthGuardService],
   },
   {

@@ -1,0 +1,13 @@
+<div class="container">
+        <div class="d-flex justify-content-center">
+            <div class="card" style="align-items: center;">
+                <div class="card-body">
+                    <h4 class="card-title" style="text-align: center;">QR CODE</h4>
+                    <qr-code [size]="350" [value]="value"></qr-code>
+                        <div class="mb-2 mt-4">
+                            <input [(ngModel)]="value" type="text" class="form-control"/>
+                        </div>
+                </div>
+            </div>
+        </div>
+</div>

@@ -21,15 +21,17 @@
                             <th>Discount</th>
                             <th>Stock</th>
                             <th>Brand</th>
+                            <th>QR</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let p of products" (click)="pf.setProduct(p)">
+                        <tr *ngFor="let p of products" (click)="showDetail(p)">
                             <td>{{ p.title }}</td>
                             <td>{{ p.price | currency }}</td>
                             <td>{{ p.discountPercentage | percent }}</td>
                             <td>{{ p.stock }}</td>
                             <td>{{ p.brand }}</td>
+                            <td><qr-code [value]="p.title"></qr-code></td>
                         </tr>
                     </tbody>
                 </table>

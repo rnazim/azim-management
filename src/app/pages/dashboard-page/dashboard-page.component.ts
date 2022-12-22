@@ -31,6 +31,11 @@ export class DashboardPageComponent {
       "title": "Content Management",
       "image": "https://picsum.photos/200/90?random=5",
       "link": ""
+    },
+    {
+      "title": "QR Code",
+      "image": "https://picsum.photos/200/90?random=6",
+      "link": "/qrcode"
     }
   ]
 
